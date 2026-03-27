@@ -8,8 +8,8 @@
         body{font-family:-apple-system,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:40px 20px;background:#f4f7f6}
         .card{background:#fff;padding:40px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center}
         h1{color:#E91E63;font-size:2.5rem;margin-bottom:10px}
-        .code-box{background:#2d2d2d;color:#a6e22e;padding:20px;border-radius:8px;text-align:left;margin:25px 0;font-family:monospace;font-size:14px;word-break:break-all;border-left:5px solid #E91E63;display:none}
-        .copy-btn{background:#E91E63;color:#fff;border:none;padding:18px 40px;border-radius:8px;cursor:pointer;font-size:1.2rem;font-weight:700;transition:0.3s;box-shadow:0 4px 15px rgba(233,30,99,0.3)}
+        .code-box{background:#2d2d2d;color:#a6e22e;padding:20px;border-radius:8px;text-align:left;margin:25px 0;font-family:monospace;font-size:13px;word-break:break-all;border-left:5px solid #E91E63; min-height: 40px; overflow: hidden;}
+        .copy-btn{background:#E91E63;color:#fff;border:none;padding:18px 40px;border-radius:8px;cursor:pointer;font-size:1.2rem;font-weight:700;transition:0.3s;box-shadow:0 4px 15px rgba(233,30,99,0.3); width: 100%;}
         .copy-btn:hover{background:#c2185b;transform:translateY(-2px)}
         .steps{text-align:left;margin:30px 0;background:#fff5f8;padding:20px;border-radius:10px}
         .step{margin-bottom:10px;display:flex;align-items:center}
@@ -21,19 +21,30 @@
     <h1>🚀 Clean Web Fix</h1>
     <p>Kill ads and speed up browsing by 45% instantly.</p>
     <div class="steps">
-        <div class="step"><div class="num">1</div>Create a Bookmark.</div>
-        <div class="step"><div class="num">2</div>Click the pink button to copy the script.</div>
-        <div class="step"><div class="num">3</div>Paste it as the Bookmark URL.</div>
+        <div class="step"><div class="num">1</div>Create a Bookmark in your browser.</div>
+        <div class="step"><div class="num">2</div>Click the button below to copy the code.</div>
+        <div class="step"><div class="num">3</div>Paste it into the Bookmark URL/Address field.</div>
     </div>
+    
     <div class="code-box" id="c">javascript:(function(){const s=document.createElement('script');s.src='https://mergeconflictme.github.io/clean-web-fix/script.js?v='+Math.random();document.body.appendChild(s);})();</div>
+    
     <button class="copy-btn" onclick="copy()">Copy Magic Code</button>
 </div>
+
 <script>
     function copy(){
-        const t=document.getElementById('c').innerText;
-        const el=document.createElement('textarea');el.value=t;document.body.appendChild(el);el.select();document.execCommand('copy');document.body.removeChild(el);
-        const b=document.querySelector('.copy-btn');b.innerText='✅ Copied!';b.style.background='#4CAF50';
-        setTimeout(()=>{b.innerText='Copy Magic Code';b.style.background='#E91E63'},2000);
+        const t = document.getElementById('c').innerText.trim();
+        navigator.clipboard.writeText(t).then(() => {
+            const b = document.querySelector('.copy-btn');
+            b.innerText = '✅ Copied to Clipboard!';
+            b.style.background = '#4CAF50';
+            setTimeout(() => {
+                b.innerText = 'Copy Magic Code';
+                b.style.background = '#E91E63';
+            }, 2000);
+        }).catch(err => {
+            alert('Please select the code manually and copy it.');
+        });
     }
 </script>
 </body>
